@@ -46,9 +46,36 @@ if (pdSelect !== "pari" && pdSelect !== "dispari") {
 } else  {
   pariDispari = true;
 }
-console.log(pariDispari);
+//console.log(pariDispari);
 
 // l'utente inserisce un numero per iniziare a giocare 
-var NumberUser = prompt("Inserisci un numero da 1 a 5 per iniziare a giocare");
+var numberUser = Number(prompt("Inserisci un numero da 1 a 5 per iniziare a giocare"));
 
 // Creiamo la funzione che genera un numero da 1 a 5 per il PC 
+var numRandom;
+function numeroRandom() {
+    return numRandom = Number(Math.floor(Math.random() * 5));
+}
+
+var numberCpu = numeroRandom();
+var somma;
+// Creiamo la funzione che somma i 2 numeri 
+function sommaNumeri(num1, num2) {
+ somma = (num1 + num2);
+}
+
+// assegnamo il risultato della funzione ad una variabile 
+var sum = Number(sommaNumeri(numberUser, numberCpu)); 
+var risultato;
+// condizione per il vincitore 
+if (pariDispari && sum %2 == 0) {
+  alert('Ha vinto in giocatore 1')
+  //console.log('Ha vinto in giocatore 1');
+}else {
+  alert ('Ha vinto il computer');
+
+  //console.log('Ha vinto il computer');
+}
+//console.log(numberCpu+ " Cpu");
+//console.log(numberUser);
+//console.log(sum);
